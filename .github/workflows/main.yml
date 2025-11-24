@@ -35,7 +35,7 @@ jobs:
 
       - name: Run Modelling
         run: |
-          mlflow run Workflow-CI/MLproject --env-manager=local
+          mlflow run ./MLProject --env-manager=local
 
       - name: Save mlruns to repo
         run: |

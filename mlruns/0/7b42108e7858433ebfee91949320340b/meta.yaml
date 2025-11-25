@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/7b42108e7858433ebfee91949320340b/artifacts
+end_time: 1764056808086
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7b42108e7858433ebfee91949320340b
+run_name: adventurous-seal-728
+run_uuid: 7b42108e7858433ebfee91949320340b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764056798442
+status: 3
+tags: []
+user_id: runner

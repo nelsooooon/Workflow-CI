@@ -52,8 +52,8 @@ These parameters can be customized when running the MLflow project.
 
 The project uses the following main dependencies:
 
-- Python 3.12.7 / 3.13.9
-- MLflow 2.18.0+
+- Python 3.13.9
+- MLflow 2.18.0rc0 (as specified in `conda.yaml`) and MLflow 2.22.0 (as used in CI/CD workflow)
 - scikit-learn 1.7.2
 - pandas 2.3.3
 - numpy 2.3.5
@@ -93,7 +93,7 @@ The GitHub Actions workflow (`.github/workflows/main.yml`) automates the entire 
 ### Pipeline Steps
 
 1. **Checkout** - Clone the repository
-2. **Setup Python** - Install Python 3.12.7
+2. **Setup Python** - Install Python 3.12.7 (CI/CD) or Python 3.13.9 (local conda environment)
 3. **Install Dependencies** - Install MLflow
 4. **Run Modelling** - Execute the MLflow project
 5. **Build Docker Image** - Create container with `mlflow models build-docker`

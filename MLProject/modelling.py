@@ -24,6 +24,10 @@ if __name__ == "__main__":
         model = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth)
         model.fit(X_train, y_train)
         
+        # Get predictions and probabilities for confidence scoring
+        y_pred = model.predict(X_test)
+        y_pred_proba = model.predict_proba(X_test)
+        
         mlflow.sklearn.log_model(
             sk_model=model,
             artifact_path="model",
@@ -31,4 +35,7 @@ if __name__ == "__main__":
             )
         
         accuracy = model.score(X_test, y_test)
+        
         mlflow.log_metric("accuracy", accuracy)
+        mlflow.log_metric("avg_confidence_class_0", y_pred_proba[:, 0].mean())
+        mlflow.log_metric("avg_confidence_class_1", y_pred_proba[:, 1].mean())
